@@ -1,13 +1,17 @@
 .books{
   margin-top: 100px;
+  text-align:center;
+  display:inline-block;
 }
+
 .book{
-  margin: 10px;
-  height: 250px;
-  width: 200px;
+  margin: 5px;
+  padding: 2px;
+  height: 300px;
+  width:200px;
   border: solid 1px black;
-  word-break: break-all;
   background:#FFFFB2;
+  overflow: scroll;
 }
 
 .book-title {
@@ -18,27 +22,18 @@
 
 .book-author {
   font-size: medium;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 form {
   font-family: 'Oleo Script', cursive;
-  font-size:18px;
-  /*color:#7CAFA8;*/
+  font-size:18px; 
+  text-align:center;
 }
 
 h1 {
   font-family: 'Londrina Shadow', cursive;
   font-size: 40px;
-  /*color:#32727C;*/
-}
-
-button {
-  /*color:#32727C;*/
-}
-
-.container {
-  text-align:center;
 }
 
 header {
@@ -46,6 +41,14 @@ header {
   text-align:center;
   padding:2px;
 }
+
+ul {
+  list-style-type: none;
+  text-align:center;
+}
+
+
+
 
 
 

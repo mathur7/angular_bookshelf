@@ -21,21 +21,21 @@
       <input type="text" ng-model="newBook.title" placeholder="title"><br></br>
       <input type="text" ng-model="newBook.author" placeholder="author"><br></br>
       <input type="text" ng-model="newBook.ISBN" placeholder="ISBN"><br></br>
-  <textarea ng-model="newBook.description" placeholder="description"></textarea>
+  	  <textarea ng-model="newBook.description" placeholder="description"></textarea>
       <br><button>Add Book</button><br></br>	
     </form>
 	
-
-    <div ng-repeat="book in books" ng-style="">
+ 
+    <div class="books" ng-repeat="book in books" ng-style="">
+   
     	<ul class="book">
-    	
     		<li class="book-title">{{book.title}} <br></li>
-         	{{book.author}} <br>
-         	{{book.description}} <br>
-         	{{book.ISBN}} <br>
-         	<br><button ng-click="remove()">Delete</button><br></br>
-     	
-      </ul>
+         	<li class="book-author">{{book.author}} <br></li>
+         	<li class="book-description">{{book.description}} <br></li>
+         	<li class="book-ISBN">{{book.ISBN}} <br></li>
+         	<br><button ng-click="remove()">Delete</button><br></br>     	
+      	</ul>
+    
     </div>
   </div>
 </div>
