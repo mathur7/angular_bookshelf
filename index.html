@@ -2,11 +2,44 @@
 <html>
 <head>
   <script src="books.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
   <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-  <link href="books.css" type="text/css" />
+  <link rel="stylesheet" href="books.css" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
   <title>Angular Bookshelf</title>
 </head>
-<body>
-  Hello World!
+<body ng-app ng-style="{background: 'url(http://i.imgur.com/6TKhO0g.jpg)'}">
+	<header>
+		<h1>ANGULAR BOOKSHELF</h1>
+	</header>
+	<div class = "container">
+
+	<div ng-controller="BooksCtrl">
+	<br>
+    <form ng-submit="addBook()">
+      <input type="text" ng-model="newBook.title" placeholder="title"><br></br>
+      <input type="text" ng-model="newBook.author" placeholder="author"><br></br>
+      <input type="text" ng-model="newBook.ISBN" placeholder="ISBN"><br></br>
+  <textarea ng-model="newBook.description" placeholder="description"></textarea>
+      <br><button>Add Book</button><br></br>	
+    </form>
+	
+
+    <div ng-repeat="book in books" ng-style="">
+    	<ul class="book">
+    	
+    		<li class="book-title">{{book.title}} <br></li>
+         	{{book.author}} <br>
+         	{{book.description}} <br>
+         	{{book.ISBN}} <br>
+         	<br><button ng-click="remove()">Delete</button><br></br>
+     	
+      </ul>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
